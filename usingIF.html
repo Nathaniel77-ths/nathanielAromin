@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--Nathaniel Aromin
+   LO2 If, loop statements-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usingIfStatements</title>
+</head>
+<body>
+    <h1>Greeting Site</h1>
+    
+        Enter Firstname : <input type="text" id="fname"> </br>
+        Enter Lastname :  <input type="text" id="lname"></br>
+        Gender
+        <select id="selectGenderId" name="selectGender" >
+            <option value="None" ></option>
+            <option value="Male" >Male</option>
+            <option value="Female" >Female</option>
+        </select>
+        <button onClick="result()">CLICK</button>
+    <script>
+       function result()
+       {
+           var gender = document.getElementById("selectGenderId");
+           var genderSelected = gender.options[gender.selectedIndex].text;
+           var fName = document.getElementById("fname").value;
+           var lName = document.getElementById("lname").value;
+          
+           if(genderSelected === "Male")
+           {
+            document.write("I am  " + fName + " " + lName + " and I am a " + genderSelected);
+           }
+           else if (genderSelected === "Female")
+           {
+            document.write("I am " + fName + " " + lName + " and I am a " + genderSelected);
+           }
+           else
+           {
+            document.write("I am " + fName + " " + lName );
+           }
+        
+        }
+    </script>
+</body>
+</html>
