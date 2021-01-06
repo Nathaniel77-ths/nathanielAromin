@@ -54,12 +54,18 @@
 
         function Visitor()
         {
+            var d = new Date();
+            var day = d.getDay();
+            var arrayDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             this.firstname = fName;
             this.lastname = lName;
             this.dept = deptSelected;
+            this.dayName = arrayDay[day];
+
             this.greet = function()
             {
-                return this.firstname.toUpperCase() + " " + this.lastname.toUpperCase() + " " + "from " + this.dept;
+                return "Today is " + this.dayName + "<br/><br/>" + this.firstname.toUpperCase() + " " + 
+                this.lastname.toUpperCase() + " " + "from " + this.dept;
             }
         }
         function VisitorX()
