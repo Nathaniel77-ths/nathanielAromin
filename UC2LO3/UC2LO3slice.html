@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC2LO3</title>
+</head>
+<body>
+    
+    <script>
+        var numbers = [2,4,6,"hard",8,13,10,12,13,14];
+        var i = 0;
+        while (i < numbers.length)
+        {
+           
+            if (isNaN(numbers[i]))
+            {
+                console.log(numbers[i].slice(1,4));
+                break;
+            }
+            else{
+                console.log(numbers[i]);
+            }
+            i++;
+        }
+
+    </script>
+</body>
+</html>

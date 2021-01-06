@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--nathaniel aromin--> 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Outcome 1</title>
+    <script src="divide.js"></script>
+</head>
+<body>
+
+    <p>the sum is: <span id="sum"></span></p>
+    <p>the difference is: <span id="diff"></span></p>
+    <p>the product is: <span id="prod"></span></p>
+    <p>the quotient is: <span id="quo"></span></p>
+
+    <script>
+        // variable initializations
+        var num1 = 2;
+        var num2 = 5;
+        var ans;
+
+        ans = num1 + num2;
+        document.getElementById("sum").innerHTML = ans;
+        document.getElementById("diff").innerHTML = subtract();
+        document.getElementById("prod").innerHTML = multiply(5,5);
+        document.getElementById("quo").innerHTML = divide(5,5);
+
+
+        function subtract(){
+            var num1 = 3;
+            var num2 = 3;
+
+            ans= num1 - num2;
+            return ans;
+        }
+
+        function multiply(x,y){
+            var ans = x*y;
+             return ans;
+        }
+            
+    </script>
+    
+</body>
+</html>
