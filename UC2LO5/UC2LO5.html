@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC2LO5</title>
+
+    <script src="submits.js"></script>
+    <script src="removes.js"></script>
+    
+    <style>
+        #main{
+            border: 2px;
+            border-style: solid;
+            margin: 20px;
+            padding: 30px;
+
+            -webkit-transition: background 0.7s;
+            -moz-transition: background 0.7s;
+            transition: backround 0.7s;
+        
+    }
+</style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Diner's Registration</h1>
+        <form >
+            <label>Name:</label>
+            <input type="text" id="name"> </br>
+            <label name="diner">Diner Type</label></br>
+                <select name="dinerType">
+                    <option>VIP</option>
+                    <option>Regular</option>
+                </select></br></br>
+            <button onclick="submitt()" name="submit">Submit</button></br></br>
+            <button onclick="removerr()" name="removes">Remove</button>
+
+        </form>
+        
+        <table border="1" id="dinerTable">
+            <tbody>
+                <tr>
+                    <td>Diner's Name</td>
+                </tr> 
+                <tr>
+                    <td>Nathaniel Aromin</td>
+                </tr>
+                <tr>
+                    <td>Ericson Aromin</td>
+                </tr>
+                <tr>
+                    <td>Sarah Aromin</td>
+                </tr>
+
+            </tbody>
+            
+
+        </table>
+    </div>
+    <script src="bkGround.js"></script>
+</body>
+</html>

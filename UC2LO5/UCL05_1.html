@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--Nathaniel Aromin
+   UC2 LO5...-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC2LO4</title>
+</head>
+<body>
+    <h1 id="heading1">Greeting Site</h1>
+
+    <h3 >Your Name will be displayed here</h3>   
+    
+
+        Enter Firstname : <input type="text" id="fname"> </br>
+        Enter Lastname :  <input type="text" id="lname"></br>
+        Select Department
+        <select id="selectDeptId" name="selectDept" >
+            <option value="None" ></option>
+            <option value="TLE" >TLE</option>
+            <option value="MATH" >MATH</option>
+        </select>
+    
+        <button onClick="result()">CLICK</button>
+    <script>
+
+     function result()
+     {
+        var fName = document.getElementById("fname").value;
+        var lName = document.getElementById("lname").value;
+
+        var department = document.getElementById("selectDeptId");
+        var deptSelected = department.options[department.selectedIndex].text;
+        
+        if(deptSelected === "TLE")
+        {
+            var title = document.getElementById("heading1");
+            title.setAttribute("style", "color:red");
+            var myVisitor = new Visitor(fName,lName,deptSelected);
+            var display = document.getElementsByTagName("h3");
+
+            display[0].innerHTML = myVisitor.greet();  
+        }
+        else if(deptSelected === "MATH")
+        {
+            var title = document.getElementById("heading1");
+            title.setAttribute("style", "color:yellow");
+            var myVisitor1 = new Visitor(fName,lName,deptSelected);
+            var display = document.getElementsByTagName("h3");
+            display[0].innerHTML = myVisitor1.greet(); 
+        }
+        else
+        {
+            var title = document.getElementById("heading1");
+            title.setAttribute("style", "color:green");
+            var myVisitorX = new VisitorX(fName,lName);
+            var display = document.getElementsByTagName("h3");
+            display[0].innerHTML = myVisitorX.greet(); 
+        }
+
+        function Visitor()
+        {
+            var d = new Date();
+            var day = d.getDay();
+            var arrayDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            this.firstname = fName;
+            this.lastname = lName;
+            this.dept = deptSelected;
+            this.dayName = arrayDay[day];
+
+            this.greet = function()
+            {
+                return "Today is " + this.dayName + "<br/><br/>" + this.firstname.toUpperCase() + " " + 
+                this.lastname.toUpperCase() + " " + "from " + this.dept;
+            }
+        }
+        function VisitorX()
+        {
+            this.firstname = fName;
+            this.lastname = lName;
+            this.dept = deptSelected;
+            this.greet = function()
+            {
+                return this.firstname.toUpperCase() + " " + this.lastname.toUpperCase() + ", " + "How are you?";
+            }
+        }
+
+       
+     }
+    </script>
+</body>
+</html>
