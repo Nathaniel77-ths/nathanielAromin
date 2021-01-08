@@ -1,11 +1,44 @@
 <!DOCTYPE html>
+<!--UC3LO1-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UC2LO5</title>
+
+    
+    
+    <style>
+        #main{
+            border: 2px;
+            border-style: solid;
+            margin: 20px;
+            padding: 30px;   
+    }
+    #dinerTable ul
+    {
+        list-style-type: none;
+    }
+</style>
+<script src="sltOne.js"></script>
+<script src="sltAll.js"></script>
 </head>
+
 <body>
+    <div id="main"> 
+        <h1 class="headings">Diners List</h1>
+        <div>
+            <ul  id="dinerTable">
+                    <li class="ly">Victoria Aromin</li>
+                    <li class="ly">Nathaniel Aromin</li>
+                    <li class="ly">Ericson Aromin</li>
+                    <li class="ly">Sarah Aromin</li>
+            </ul>
+        </div>
+        <br/><br/>
+        <button onclick="sltOne()">Select One</button> <button onclick="sltAll()">Select All</button>
+
+    </div>
     
 </body>
 </html>
