@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--UC3LO2
+Nathaniel Aromin
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC2LO5</title>
+
+    
+    
+    <style>
+        #main{
+            border: 2px;
+            border-style: solid;
+            margin: 20px;
+            padding: 30px;   
+    }
+    #dinerTable ul
+    {
+        list-style-type: none;
+    }
+</style>
+
+<script src="showContent.js"></script>
+<script src="addToList.js"></script>
+<script src="parentChild.js"></script>
+<script src="kapatid.js"></script>
+</head>
+
+<body>
+    <div id="main"> 
+        <h1 class="headings">Diners List</h1>
+        <div>
+            <ul  id="dinerTable">
+                    <li class="ly">Victoria Aromin</li>
+                    <li class="ly">Nathaniel Aromin</li>
+                    <li class="ly">Ericson Aromin</li>
+                    <li class="ly">Sarah Aromin</li>
+            </ul>
+        </div>
+        <br/>
+
+        <form >
+            <label>Name:</label>
+            <input type="text" id="name"> </br>
+           
+
+        </form>
+        <br/><br/>
+        <button onclick="sltAll()">Update List</button><button onclick="addList()">Add to List</button>
+       <button onclick=" parChi()">Show Child</button> <button onclick=" kapatiran()">Siblings</button>
+    </div>
+    
+</body>
+</html>
